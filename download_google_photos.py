@@ -150,7 +150,7 @@ def main():
     log_file = 'GoogPics_download.log'
     setup_logging(log_file)
     service = authenticate_google_photos()
-    base_path = 'C:\\myProj\\GoogPics' # Path to download media
+    base_path = os.path.dirname(os.path.abspath(__file__))
     download_media(service, base_path)
 
 if __name__ == '__main__':
